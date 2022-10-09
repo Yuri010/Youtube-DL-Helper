@@ -155,7 +155,14 @@ echo.
 echo ==================================================
 echo.
 echo Download Started...
-youtube-dl --format best --embed-thumbnail --add-metadata --ffmpeg-location "%ffmpeg%" %link%
+youtube-dl -F %link%
+echo.
+echo Please select one of the listed formats
+echo (or type "best" for the best quality (might not always work properly))
+set /p format=Format: 
+echo.
+echo Continueing download with format %format%...
+youtube-dl --format %format% --embed-thumbnail --add-metadata --ffmpeg-location "%ffmpeg%" %link%
 echo.
 echo ==================================================
 echo.
