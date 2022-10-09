@@ -7,7 +7,7 @@ This script has been made to just ease up the use of Youtube-DL. On itself, it i
 But we are lazy! So why not automate (most of) it?!
 
 ## Known Problems
-- Video downloads in low quality (for example 640x480 instead of the highest quality available)
+- Video downloads in low quality (for example 640x480 instead of the highest quality available) ([#1](https://github.com/Yuri010/Youtube-DL-Helper/issues/1))
 - Nothing else, you tell me :)
 
 ## Legal
