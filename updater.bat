@@ -69,11 +69,14 @@ echo.
 echo Log: ====================================================================================================
 echo.
 curl -0 -L https://raw.githubusercontent.com/Yuri010/Youtube-DL-Helper/main/ytdl-helper.bat -o ytdl-helper-new.bat
+curl -0 -L https://raw.githubusercontent.com/Yuri010/Youtube-DL-Helper/main/Updater.bat -o updater-new.bat
 echo.
 echo =========================================================================================================
 echo Updating to version %gver% over %lver%...
 move ytdl-helper.bat ytdl-helper-old.bak
 move ytdl-helper-new.bat ytdl-helper.bat
+move updater.bat updater-old.bak
+move updater-new.bat updater.bat
 cls
 echo Updating to version %gver% over %lver%... Done!
 echo.
