@@ -1,6 +1,6 @@
 # Youtube-DL-Helper
 Simple CLI script to make the use of Youtube-DL easier.
-Special thanks to [@BennoMP](https://github.com/bennomp) for coming up with the part that downloads FFmpeg and Youtube-DL in case they are missing.
+Special thanks to [@Foxydiot](https://github.com/foxydiot) for coming up with the part that downloads FFmpeg and Youtube-DL in case they are missing.
 (He is working on a version of himself, based on version 1.0)
 
 This script has been made to just ease up the use of Youtube-DL. On itself, it is just a CLI app where you need to enter a lot of little arguments and stuff..
