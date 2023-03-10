@@ -1,4 +1,4 @@
-:: version 2.1.0
+:: version 2.2
 @echo off
 :start
 cls
@@ -37,20 +37,8 @@ if /I "%errorlevel%" == "2" (
 )
 if /I "%errorlevel%" == "1" (
     cls
-    echo Attempting to obtain the latest FFmpeg release from https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
-    echo.
-    echo Log: ====================================================================================================
-    echo.
-    curl --output ffmpeg.zip -L https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip > nul
-    echo.
-    echo =========================================================================================================
-    tar -xf ffmpeg.zip
-    timeout /t 1 /nobreak > nul
-    del ffmpeg.zip
-    cls
-    echo Restarting Script. Please Wait...
-    timeout /t 2 /nobreak > nul
-    goto :start
+    start "" "%~dp0\Updater.bat" ffmpeg-dwd
+    exit
 )
 
 
@@ -78,18 +66,8 @@ if /I "%errorlevel%" == "2" (
 )
 if /I "%errorlevel%" == "1" (
     cls
-    echo Attemtping to obtain the latest Youtube-DL release from https://youtube-dl.org/downloads/latest/youtube-dl.exe
-    echo.
-    echo.
-    echo Log: ====================================================================================================
-    echo.
-    curl --output youtube-dl.exe -L https://youtube-dl.org/downloads/latest/youtube-dl.exe > nul
-    echo.
-    echo =========================================================================================================
-    cls
-    echo Restarting Script. Please Wait...
-    timeout /t 2 /nobreak > nul
-    goto :start
+    start "" "%~dp0/Updater.bat" ytdl-dwd
+    exit
 )
 
 
@@ -98,7 +76,7 @@ if /I "%errorlevel%" == "1" (
 :main
 cls
 echo ==================================================
-echo Youtube-DL Helper 2.0
+echo Youtube-DL Helper 2.2
 echo Youtube-DL Version %ytdlver%
 echo FFmpeg Version %ffmpegver%
 echo ==================================================
