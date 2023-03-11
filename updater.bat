@@ -39,22 +39,6 @@ for /F "tokens=3 delims= " %%c IN ('findstr /I "version" ytdl-helper.bat') DO (
 
 :main
 del releases.tmp
-if /I "%lver%" GTR %gver% (
-    cls
-    echo Hey! Github isn't Up-to-Date!
-    echo.
-    echo Press any key to exit...
-    pause > nul
-    exit
-)
-if /I "%lver%" == %gver% (
-    cls
-    echo YTDL-Helper is Up-to-Date.
-    echo.
-    echo Press any key to exit...
-    pause > nul
-    exit
-)
 if exist "ytdl-helper.bat" (
     if "%lver%" LSS %gver% (
         cls
@@ -62,6 +46,22 @@ if exist "ytdl-helper.bat" (
         choice /c YN /N
         if /I "%errorlevel%" EQU "2" exit
         if /I "%errorlevel%" EQU "1" goto :update
+    )
+    if /I "%lver%" GTR %gver% (
+        cls
+        echo Hey! Github isn't Up-to-Date!
+        echo.
+        echo Press any key to exit...
+        pause > nul
+        exit
+    )
+    if /I "%lver%" == %gver% (
+        cls
+        echo YTDL-Helper is Up-to-Date.
+        echo.
+        echo Press any key to exit...
+        pause > nul
+        exit
     )
 ) else (
     cls
