@@ -52,12 +52,20 @@ echo Press any key to exit...
 pause > nul
 exit
 )
+if exist "ytdl-helper.bat" (
 if "%lver%" LSS %gver% (
 cls
 echo An update is available, would you like to install it? [Y/N]
 choice /c YN /N
 if /I "%errorlevel%" EQU "2" exit
 if /I "%errorlevel%" EQU "1" goto :update
+)
+)
+else (
+cls
+echo The YTDL-Helper is not installed! It will be installed automatically.
+timeout 5
+goto :update
 )
 
 :: ==================================================Update==================================================
