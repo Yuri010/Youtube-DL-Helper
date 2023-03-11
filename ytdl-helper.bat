@@ -1,4 +1,4 @@
-:: version 2.2
+:: version 2.2.1
 @echo off
 :start
 cls
@@ -76,7 +76,7 @@ if /I "%errorlevel%" == "1" (
 :main
 cls
 echo ==================================================
-echo Youtube-DL Helper 2.2
+echo Youtube-DL Helper 2.2.1
 echo Youtube-DL Version %ytdlver%
 echo FFmpeg Version %ffmpegver%
 echo ==================================================
